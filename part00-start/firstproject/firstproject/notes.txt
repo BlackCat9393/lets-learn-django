@@ -1,1 +1,12 @@
 1. Model View Template
+2. regular expressions
+3. http responce contains:
+	3.1 status code
+	3.2 headers (cookies, caching data, ...)
+	3.3 resources(html, css, js, ...)
+4. templates--> in settings.TEMPLATES.['DIR'] = [tempsDir], add tempsDir in same dir as manage.py
+5. TemplateView
+6. Models:
+6. ./manage.py sqlmigrate newApp 0001 (https://docs.djangoproject.com/en/3.0/intro/tutorial02/)
+
+

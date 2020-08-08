@@ -16,9 +16,12 @@ Including another URLconf
 from django.conf.urls import re_path
 from django.contrib import admin
 from django.urls import path
-from .views import HelloWorldView
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('^hello$', HelloWorldView.as_view(), name = "home"),
+    path('', views.NewHelloWorldView.as_view(), name = "home"),
+    path('t', views.AnotherHelloWorldView.as_view(), name = "home"),
+    re_path('^hello$', views.HelloWorldView.as_view(), name = "home1"),
+    re_path('^a.*$', views.TestView, name = "home2"),
 ]
